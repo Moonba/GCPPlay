@@ -1,6 +1,6 @@
 # Original Script 
 
-conf = SparkConf().setAppName("MoreConRecALS")
+conf = SparkConf().setAppName("MyApp")
 sc = SparkContext(conf=conf)
 sqlContext = SQLContext(sc)
 
@@ -20,7 +20,7 @@ dfRates = sqlContext.load(source='jdbc', driver=jdbcDriver, url=jdbcUrl, dbtable
 a)
 dfRates = sqlContext.read \
     .format("jdbc") \
-    .options(url="jdbc:mysql://130.211.246.224:3306/morecon?user=root&password=spark155",
+    .options(url="jdbc:mysql://130.211.246.224:3306/morecon?user=x&password=xx",
              dbtable="dtb_ratings",
              driver="com.mysql.jdbc.Driver") \
     .load()
@@ -35,7 +35,7 @@ a)
 
 
 jdbcUrl = 'jdbc:mysql://%s:3306/%s' % (CLOUDSQL_INSTANCE_IP, CLOUDSQL_DB_NAME)
-dfRates = sqlContext.read.jdbc(url=url, table="dtb_ratings", properties={"user": "root", "password": "spark155"})
+dfRates = sqlContext.read.jdbc(url=url, table="dtb_ratings", properties={"user": "", "password": ""})
 sqlContext.read.jdbc(url=url, table="baz", properties=properties)
 
 a)
@@ -57,7 +57,7 @@ dfRates.show();
 2/ SparkSession
 spark = SparkSession \
         .builder \
-        .appName("MoreConRecALS") \
+        .appName("MyApp") \
         .getOrCreate()
 
 def jdbc_dataset_example(spark):
