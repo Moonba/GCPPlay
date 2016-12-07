@@ -1,5 +1,5 @@
 #Run from Master Node where is located the driverFile 
-#spark-submit --driver-class-path mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar --jars mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar /home/mouna_balghouthi/rectest4.py 173.194.82.148 morecon moo spark
+#spark-submit --driver-class-path mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar --jars mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar /home/rectest4.py IP DB user pass
 
 #!/usr/bin/env python
 import sys
