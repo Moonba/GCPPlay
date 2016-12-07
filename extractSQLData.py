@@ -4,7 +4,7 @@ from pyspark.sql import SparkSession
 
 spark = SparkSession \
         .builder \
-        .appName("MoreConRecALS") \
+        .appName("MyApp") \
         .getOrCreate()
 
 
@@ -37,4 +37,4 @@ sqlDF.show()
 *****************************************************************************************************************************
 CONNECT FROM MASTER NODE 
 
-mysql --host=CLOUDSQL_INSTANCE_IP --user=moo --password
+mysql --host=CLOUDSQL_INSTANCE_IP --user=x --password
