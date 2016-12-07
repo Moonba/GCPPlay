@@ -5,13 +5,13 @@ spark-submit \
 --driver-class-path mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar \
 --jars mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar \
 /home/mouna_balghouthi/rectest4.py \
-173.194.82.148 \
-morecon \
-moo \
-spark
+IP \
+Dbname \
+user \
+pass
 *****************************************************************************************************************************
 Traceback (most recent call last):
-  File "/home/mouna_balghouthi/rectest4.py", line 62, in <module>
+  File "/home/rectest4.py", line 62, in <module>
     dfUserRatings  = dfRates.filter(dfRates.customer_id == USER_ID).map(lambda r: r.product_id).collect()
   File "/usr/lib/spark/python/lib/pyspark.zip/pyspark/sql/dataframe.py", line 841, in __getattr__
 AttributeError: 'DataFrame' object has no attribute 'map'
@@ -22,7 +22,7 @@ AttributeError: 'DataFrame' object has no attribute 'map'
 *****************************************************************************************************************************
   ERROR :
 
-  File "/home/mouna_balghouthi/rectest2.py", line 41, in <module>
+  File "/home/rectest2.py", line 41, in <module>
     dfRates = sqlContext.load(source='jdbc', driver=jdbcDriver, url=jdbcUrl, dbtable=TABLE_RATINGS)
 AttributeError: 'SQLContext' object has no attribute 'load'
 
@@ -94,9 +94,9 @@ $ gcloud dataproc jobs submit spark --cluster dplab \
 
 spark-submit --cluster=rupdwh --bucket=rupdwh --py-files=hrectest1.py nope
 
-spark-submit --master spark://Moon.local:7077 /Users/mounabalghouthi/Desktop/HybridRS/HybridRecommender.py
+spark-submit --master spark://Moon.local:7077 /Users/Desktop/HybridRS/HybridRecommender.py
 
-gcloud dataproc jobs submit pyspark --cluster rupdwh /Users/mounabalghouthi/Desktop/HybridRS/HybridRecommender.py
+gcloud dataproc jobs submit pyspark --cluster rupdwh /Users/Desktop/HybridRS/HybridRecommender.py
 
 # 2/ from a local computer:
 $ gcloud compute ssh rupdwh-m
@@ -107,9 +107,9 @@ $ gcloud beta dataproc jobs submit pyspark \
   --cluster rupdwh \
   --driver-class-path mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar \
   --jars mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar \
-  /home/mouna_balghouthi/rectest4.py \
-  173.194.82.148 \
-  instancetest9 \
-  morecon \
-  moo \
-  spark
+  /home/rectest4.py \
+ ip \
+  instancetestx \
+ db \
+  user \
+  pass
