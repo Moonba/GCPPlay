@@ -16,14 +16,14 @@ from pyspark.sql.types import IntegerType
 
 spark = SparkSession \
         .builder \
-        .appName("MoreConRecALS") \
+        .appName("MyApp") \
         .getOrCreate()
 
 
 USER_ID = 272143 #602182 #sys.argv[] 
 
-CLOUDSQL_INSTANCE_IP = sys.argv[1] #104.199.213.82
-CLOUDSQL_DB_NAME = sys.argv[2] #morecon
+CLOUDSQL_INSTANCE_IP = sys.argv[1] 
+CLOUDSQL_DB_NAME = sys.argv[2] 
 CLOUDSQL_USER = sys.argv[3] 
 CLOUDSQL_PWD  = sys.argv[4] 
 

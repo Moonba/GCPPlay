@@ -2,10 +2,10 @@ spark-submit \
 --driver-class-path mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar \
 --jars mysql-connector-java-5.1.40/mysql-connector-java-5.1.40-bin.jar \
 /home/mouna_balghouthi/cleandata.py \
-173.194.82.148 \
-morecon \
-moo \
-spark
+My_Instance_IP \
+DbName \
+user \
+pass
 
 #Create Data sets in CSV ! from CloudSQL database morecon to Cloud SQL table
 import sys
